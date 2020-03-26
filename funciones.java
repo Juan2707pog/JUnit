@@ -168,3 +168,37 @@ public class Funcion6 {
 
         }
 }
+import java.util.Arrays;
+//no definimos algunos parametros importantes, como los nombres de los alumnos, y los hemos colocado para que funcione bien  
+public class Funcion7 {
+    public static void main(String[] args) {
+        String [] listaDeCadenas = {"Javier", "Carlos", "Limonxelo", "Carlitos"};
+        System.out.println(Funcion7(listaDeCadenas));
+    }
+
+     public static String Funcion7(String[] listaDeCadenas) {
+
+
+            if (listaDeCadenas != null) {
+
+                for (int i = 0; i < listaDeCadenas.length; i++) {
+
+                    String cadena = listaDeCadenas[i];
+
+                    if (!cadena.equals("")){
+                        listaDeCadenas[i] = cadena.substring(3, 6);
+                    }else {
+                        cadena ="";
+                    }
+
+                }
+
+            } else {
+                listaDeCadenas = null;
+            }
+
+            return Arrays.toString(listaDeCadenas);
+
+            }
+}
+
